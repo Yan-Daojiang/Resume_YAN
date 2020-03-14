@@ -1,0 +1,175 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.5, 1 December 2018) written by
+% Neeraj Giri (giri492neeraj@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+\usepackage{ctex}   % 如果想让模板支持中文，引入ctex宏包
+\usepackage{hyperref}
+\hypersetup{hidelinks} % 隐藏超链接的小框
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+%% \addbibresource{sample.bib}
+
+\begin{document}
+\name{颜道江}    % 
+\tagline{个人简历}
+
+%\tagline{Software and Data enthusiast, Technical Hoarder \& Proud Geek}
+
+
+\photo{4.0cm}{pic/yandaojiang}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \href{mailto:yan\_daojiang@163.como}{\email{yan\_daojiang@163.com}}
+  \phone{+86-18186451525}
+  \wechat{ydj1373836603}
+  \QQ{1373836603}
+  
+  % \linkedin{linkedin.com/in/}
+  \href{http://yandaojiang.com}{\homepage{yandaojiang.com}}
+  \href{https://github.com/yan-daojiang}{\github{github.com/yan-daojiang}}
+  % \href{https://blog.csdn.net/qq_40892332}{\homepage{CSDN}}
+  \location{湖北, 武汉}
+  \mailaddress{湖北省武汉市洪山区,文秀街升升公寓C栋，430070}
+
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{PROJECTS}
+
+\cvevent{FAIR SHARE}{学期实践 }{Dec 2019 -- Jan 2020}{湖北, 武汉 }
+\begin{itemize}
+\item\textbf{项目简介:\,}FAIR    \, SHARE是一个局域网文件共享系统.该项目基于TCP/IP通信协议，使用C++ QT框架开发,主要功能为实现局域网内的P2P文件共享，支持断点续传等功能.
+\item \textbf{主要技术:\,}\emph{QT框架\quad TCP/IP通信协议\quad MySQL数据库}
+\item 个人主要负责需求分析，数据库设计实现以及服务端开发.
+
+\end{itemize}
+
+\divider
+
+\cvevent{图书馆管理系统}{课程实践}{NOV 2019 -- DEC 2019}{}
+\begin{itemize}
+\item\textbf{项目简介:\,} 该项目为数据库系统基本原理课程实践，要求实现一个图书馆管理系统.
+\item \textbf{主要技术:\,}\emph{PHP\quad Bootstrap框架}
+\item 个人主要负责数据库逻辑设计与前端开发.
+\end{itemize}
+
+\divider
+
+\cvevent{极坐标系下叶片特征提取及基于 K 近邻 的叶片类型判别}{数学建模练习}{July 2019}{}
+\begin{itemize}
+\item\textbf{项目简介:\,} 该项目主要通过在极坐标系下对叶片的几何特征进行提取，然后利用K近邻算法实现对叶片的分类.项目全部通过python实现，测试集准确率可达90\%以上.
+\item \textbf{主要技术:\,}\emph{K近邻算法}
+\item 个人负责所有特征提取,算法实现与优化.
+\end{itemize}
+
+\divider
+
+\cvevent{欢乐连连看}{课程实践}{June 2019}{}
+\begin{itemize}
+	\item\textbf{项目简介:\,} 该项目为数据结构与算法课程实践，主要基于C++ MFC开发一个连连看小游戏.
+	\item \textbf{主要技术:\,}\emph{数据结构-线性结构 \quad MFC}
+	\item 个人项目，负责所有设计与实现.
+\end{itemize}
+
+\clearpage
+
+\cvsection[page2sidebar]{Projects}
+\cvevent{基于时间序列的电商销量预测 }{数学建模竞赛}{May 2019 }{湖北, 武汉}
+\begin{itemize}
+\item\textbf{项目简介:\,}该项目主要通过对电商以往销量进行可视化并构建ARIMA模型进行短期销量预测.
+\item \textbf{主要技术:\,}\emph{ARIMA模型\quad 数据可视化 \quad 统计分析}
+\item 个人负责数据可视化工作以及通过Python编程构建ARIMA模型进行短期销量预测.
+\end{itemize}
+
+\divider
+
+\cvevent{景区管理系统}{课程实践}{April 2019}{}
+\begin{itemize}
+\item\textbf{项目简介:\,}该项目为数据结构与算法课程实践项目，主要通过C++编程实现各类图算法.
+\item \textbf{主要技术:\,}\emph{C++程序设计 \quad 图算法}
+\item 个人项目，负责所有功能点的分析设计与实现工作.
+\end{itemize}
+
+\divider
+
+
+% \begin{itemize}
+% \item Joined the co
+
+%\begin{flushleft}
+%	\emph{Jan 19th, 2020}
+%\end{flushleft}
+\begin{flushright}
+	\tiny{更新于\today \qquad 颜道江}
+\end{flushright}
+
+\clearpage
+
+\end{document}
+
+
